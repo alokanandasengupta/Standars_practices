@@ -1,6 +1,11 @@
 import streamlit as st
 import pandas as pd
-import plotly.express as px
+try:
+    import plotly.express as px
+    PLOTLY_AVAILABLE = True
+except ImportError:
+    PLOTLY_AVAILABLE = False
+    px = None
 import json
 import os
 import time
