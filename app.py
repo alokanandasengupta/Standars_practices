@@ -257,7 +257,7 @@ class FilmScriptProcessor:
                   },
                 temperature=0.1,
                 response_format={"type": "json_object"}
-            )
+            }
             
             result = json.loads(response.choices[0].message.content)
             return result
