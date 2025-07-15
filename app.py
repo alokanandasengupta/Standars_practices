@@ -254,7 +254,7 @@ class FilmScriptProcessor:
                         }}
                     }}
                     Script: {text[:10000]}..."""  # Limiting to first 10k chars for demo
-                },
+                  },
                 temperature=0.1,
                 response_format={"type": "json_object"}
             )
