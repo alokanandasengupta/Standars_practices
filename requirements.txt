@@ -1,26 +1,7 @@
-# Core Streamlit and web framework
-streamlit>=1.28.0
-
-# Data processing and visualization
-pandas>=1.5.3
-plotly>=5.17.0
-
-# AI/ML API client
-openai>=1.0.0
-
-# Document processing
-PyPDF2>=3.0.1
-pdfplumber>=0.9.0
-python-docx>=0.8.11
-
-# Excel processing
-openpyxl>=3.1.0
-
-# PDF generation
-reportlab>=4.0.4
-
-# Image processing
-Pillow>=10.0.0
-
-# Standard library (these come with Python but listed for clarity)
-# json, os, time, datetime, re, io, zipfile, hashlib, typing are built-in
+streamlit
+pandas
+plotly
+openai
+PyPDF2
+python-docx
+openpyxl
