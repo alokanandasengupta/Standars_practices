@@ -168,10 +168,17 @@ def authenticate_user():
 def get_deepseek_api_key():
     """Get DeepSeek API key from Streamlit secrets or user input"""
     try:
+        # First try to get from secrets.toml
+        if 'DEEPSEEK_API_KEY' in st.secrets:
+            return st.secrets['DEEPSEEK_API_KEY']
+        
+        # Then check for session state (temporary key)
         if hasattr(st.session_state, 'temp_deepseek_key') and st.session_state.temp_deepseek_key:
             return st.session_state.temp_deepseek_key
-        return st.secrets.get("DEEPSEEK_API_KEY", None)
-    except:
+        
+        return None
+    except Exception as e:
+        st.error(f"Error accessing API key: {str(e)}")
         return None
 
 # Film Script Processing Class
