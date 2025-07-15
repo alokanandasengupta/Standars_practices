@@ -1,17 +1,6 @@
 import streamlit as st
 import pandas as pd
-import streamlit as st
-import pandas as pd
-
-# Handle optional Plotly import
-try:
-    import plotly.express as px
-    PLOTLY_AVAILABLE = True
-except ImportError:
-    PLOTLY_AVAILABLE = False
-    px = None
-
-# Standard libraries
+import plotly.express as px
 import json
 import os
 import time
@@ -19,34 +8,12 @@ from datetime import datetime
 import io
 import hashlib
 from typing import Dict, List, Any, Tuple, Optional
-
-# External libraries
-try:
-    from openai import OpenAI
-except ImportError:
-    raise ImportError("The 'openai' package is not installed. Run `pip install openai`.")
-
-try:
-    import PyPDF2
-except ImportError:
-    raise ImportError("The 'PyPDF2' package is not installed. Run `pip install PyPDF2`.")
-
-try:
-    from docx import Document
-except ImportError:
-    raise ImportError("The 'python-docx' package is not installed. Run `pip install python-docx`.")
-
-try:
-    from openpyxl import Workbook
-    from openpyxl.styles import Font, PatternFill, Alignment
-except ImportError:
-    raise ImportError("The 'openpyxl' package is not installed. Run `pip install openpyxl`.")
-
-try:
-    from PIL import Image
-except ImportError:
-    raise ImportError("The 'Pillow' package is not installed. Run `pip install Pillow`.")
-
+from openai import OpenAI
+import PyPDF2
+from docx import Document
+from openpyxl import Workbook
+from openpyxl.styles import Font, PatternFill, Alignment
+from PIL import Image
 
 # Configuration
 st.set_page_config(
