@@ -42,3 +42,5 @@ streamlit run app.py
 
 Needs `OPENAI_API_KEY` and `MISTRAL_API_KEY` via Streamlit secrets
 (`.streamlit/secrets.toml`) — read through `st.secrets`, never hardcoded.
+The app includes a lightweight login gate (email-domain check); it's
+demo-grade access control, not production auth.
